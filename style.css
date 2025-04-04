@@ -3,14 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
 
 body {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Black Han Sans', sans-serif;
     background-color: #EEEAE1;
     color: black;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Use min-height to ensure footer stays at bottom */
 }
 .header {
     background-color: transparent;
@@ -37,6 +37,22 @@ body {
     margin-left: 20px;
     font-size: 18pt;
 }
+.main-content {
+    flex-grow: 1;
+    padding: 40px 50px; /* Add padding for consistency */
+}
+
+/* Index page specific style */
+.main-content.index-page {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding-left: 50px;
+}
+.main-content.index-page p {
+    font-size: 24pt;
+    font-weight: bold;
+}
 
 /* IR List Page Specific Styles */
 .main-content.ir-list {
@@ -52,6 +68,7 @@ body {
     border-collapse: collapse;
     margin-top: 20px;
     font-size: 14pt;
+    font-family: 'Noto Sans KR', sans-serif; /* Apply Noto Sans KR to table */
 }
 .main-content.ir-list th,
 .main-content.ir-list td {
@@ -88,17 +105,16 @@ body {
 
 /* IR Detail Page Specific Styles */
 .main-content.ir-detail {
-    flex-grow: 1;
-    padding: 40px 50px;
-    text-align: left; /* 상세 내용은 왼쪽 정렬 */
-    max-width: 800px; /* 내용 최대 너비 설정 */
-    margin: 0 auto; /* 가운데 정렬 */
+    text-align: left; /* Detail content aligned left */
+    max-width: 800px; /* Max width for readability */
+    margin: 0 auto; /* Center align the content block */
+    font-family: 'Noto Sans KR', sans-serif; /* Apply Noto Sans KR */
 }
 .main-content.ir-detail h2 {
     font-family: 'Black Han Sans', sans-serif;
-    font-size: 28pt; /* 제목 크기 조정 */
+    font-size: 28pt;
     margin-bottom: 20px;
-    text-align: center; /* 제목만 가운데 정렬 */
+    text-align: center;
 }
 .notice-meta {
     text-align: right;
@@ -110,7 +126,6 @@ body {
     margin-top: 30px;
     font-size: 14pt;
     line-height: 1.8;
-    /* 실제 공고 내용 스타일에 맞게 추가 조정 */
 }
 .button-area {
     text-align: center;
@@ -133,7 +148,8 @@ hr {
     margin: 20px 0;
 }
 
-/* Footer Styles */
+
+/* Footer Styles (Unified) */
 .footer {
     background-color: transparent;
     padding: 20px;
@@ -159,9 +175,8 @@ hr {
     justify-content: center;
     font-family: 'Noto Sans KR', sans-serif;
 }
-.footer, .main-content p {
-    font-weight: bold;
-}
+
+/* General Anchor Style */
 a {
     color: black;
     text-decoration: none;

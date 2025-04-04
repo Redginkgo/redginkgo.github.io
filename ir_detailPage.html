@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RedGinkgo Games - 소규모합병에 따른 주주확정 기준일 공고</title>
-<link rel="stylesheet" href="ir_style.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -36,15 +36,15 @@
     </div>
 </div>
 
-<div class="footer">
-    <img src="./www/foot.png" alt="Footer Logo" class="footer-logo">
-    <div class="footer-info">
-        <p>RedGinkgo Games Co., Ltd. </p>
-        <p>CEO Sooyong Park</p>
-        <p>Address: 05719, Room 537, 5F, 97, Jungdae-ro, Songpa-gu, Seoul, Korea (Garak-dong)</p>
-        <p>E-mail: <a href="mailto:contact-us@redginkgogames.com">contact-us@redginkgogames.com</a></p>
-    </div>
-</div>
+<div id="footer-placeholder"></div>
+
+<script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+        });
+</script>
 
 </body>
 </html> 

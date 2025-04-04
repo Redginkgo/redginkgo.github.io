@@ -152,6 +152,7 @@ hr {
 /* Footer Styles (Unified) */
 .footer {
     background-color: transparent;
+    font-family: 'Black Han Sans', sans-serif;
     padding: 20px;
     display: flex;
     align-items: center;

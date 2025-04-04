@@ -159,6 +159,9 @@ hr {
     justify-content: center;
     font-family: 'Noto Sans KR', sans-serif;
 }
+.footer, .main-content p {
+    font-weight: bold;
+}
 a {
     color: black;
     text-decoration: none;

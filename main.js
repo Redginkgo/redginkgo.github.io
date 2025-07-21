@@ -3,15 +3,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function loadFooter() {
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-            const footerPlaceholder = document.getElementById('footer-placeholder');
-            if (footerPlaceholder) {
-                footerPlaceholder.innerHTML = data;
-            }
-        })
-        .catch(error => {
-            console.error('Footer 로딩 중 오류 발생:', error);
-        });
+    const footerContent = `
+        <div class="footer">
+            <img src="./www/foot.png" alt="Footer Logo" class="footer-logo">
+            <div class="footer-info">
+                <p>RedGinkgo Games Co., Ltd. </p>
+                <p>CEO Sooyong Park</p>
+                <p>Address: 05719, Room 537, 5F, 97, Jungdae-ro, Songpa-gu, Seoul, Korea (Garak-dong)</p>
+                <p>E-mail: <a href="mailto:contact-us@redginkgogames.com">contact-us@redginkgogames.com</a></p>
+            </div>
+        </div>
+    `;
+    
+    const footerPlaceholder = document.getElementById('footer-placeholder');
+    if (footerPlaceholder) {
+        footerPlaceholder.innerHTML = footerContent;
+    }
 } 

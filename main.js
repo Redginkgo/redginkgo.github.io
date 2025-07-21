@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function setFavicons() {
     const head = document.head;
-    const sizes = [16, 32, 64, 128];
+    // const sizes = [16, 32, 64, 128];
+    const sizes = [32];
     
     sizes.forEach(size => {
         const link = document.createElement('link');

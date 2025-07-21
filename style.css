@@ -178,6 +178,29 @@ hr {
 }
 
 /* Download Page Specific Styles */
+.announcement-box {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0 auto 40px;
+    max-width: 800px;
+    text-align: left;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.announcement-box p {
+    margin: 0;
+    line-height: 1.6;
+}
+.announcement-box strong {
+    font-weight: 700;
+}
+.notice-divider {
+    border: 0;
+    border-top: 1px solid #f5c6cb;
+    margin: 15px 0;
+}
 .video-container {
     width: 100%;
     max-width: 800px;

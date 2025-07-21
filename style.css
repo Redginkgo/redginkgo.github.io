@@ -210,30 +210,30 @@ hr {
     color: #555;
 }
 .download-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 16pt;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+    display: inline-block !important;
+    padding: 15px 30px !important;
+    background-color: #4CAF50 !important;
+    color: white !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    font-size: 16pt !important;
+    font-weight: bold !important;
+    transition: background-color 0.3s ease !important;
 }
 .download-button:hover {
-    background-color: #45a049;
+    background-color: #45a049 !important;
 }
 .download-button.android {
-    background-color: #3DDC84;
+    background-color: #3DDC84 !important;
 }
 .download-button.android:hover {
-    background-color: #2BB673;
+    background-color: #2BB673 !important;
 }
 .download-button.ios {
-    background-color: #007AFF;
+    background-color: #007AFF !important;
 }
 .download-button.ios:hover {
-    background-color: #0056CC;
+    background-color: #0056CC !important;
 }
 
 /* General Anchor Style */

@@ -178,6 +178,19 @@ hr {
 }
 
 /* Download Page Specific Styles */
+.video-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 .main-content.download-page {
     text-align: center;
     font-family: 'Noto Sans KR', sans-serif;

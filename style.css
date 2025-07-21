@@ -177,6 +177,65 @@ hr {
     font-weight: bold;
 }
 
+/* Download Page Specific Styles */
+.main-content.download-page {
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.main-content.download-page h2 {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 36pt;
+    margin-bottom: 40px;
+}
+.download-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.download-section {
+    margin-bottom: 50px;
+    padding: 30px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.download-section h3 {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 24pt;
+    margin-bottom: 15px;
+    color: #333;
+}
+.download-section p {
+    font-size: 14pt;
+    margin-bottom: 25px;
+    color: #555;
+}
+.download-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16pt;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.download-button:hover {
+    background-color: #45a049;
+}
+.download-button.android {
+    background-color: #3DDC84;
+}
+.download-button.android:hover {
+    background-color: #2BB673;
+}
+.download-button.ios {
+    background-color: #007AFF;
+}
+.download-button.ios:hover {
+    background-color: #0056CC;
+}
+
 /* General Anchor Style */
 a {
     color: black;

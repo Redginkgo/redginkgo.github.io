@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    setFavicons();
     loadFooter();
 });
 
@@ -11,5 +10,8 @@ function loadFooter() {
             if (footerPlaceholder) {
                 footerPlaceholder.innerHTML = data;
             }
+        })
+        .catch(error => {
+            console.error('Footer 로딩 중 오류 발생:', error);
         });
 } 

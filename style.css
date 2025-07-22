@@ -282,4 +282,266 @@ hr {
 a {
     color: black;
     text-decoration: none;
+}
+
+/* 반응형 웹 디자인 - 모바일 기기 */
+@media screen and (max-width: 768px) {
+    /* 헤더 반응형 */
+    .header {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .company-logo {
+        height: 50px;
+        margin: 10px 0;
+    }
+    
+    .nav {
+        margin: 10px 0;
+    }
+    
+    .nav a {
+        font-size: 14pt;
+        margin: 0 10px;
+        display: inline-block;
+    }
+    
+    /* 메인 콘텐츠 반응형 */
+    .main-content {
+        padding: 20px 15px;
+    }
+    
+    .main-content.index-page {
+        padding: 20px 15px;
+        text-align: center;
+    }
+    
+    .main-content.index-page p {
+        font-size: 18pt;
+        line-height: 1.4;
+    }
+    
+    /* IR 페이지 반응형 */
+    .main-content.ir-list h2 {
+        font-size: 24pt;
+        margin-bottom: 20px;
+    }
+    
+    .main-content.ir-list table {
+        font-size: 12pt;
+    }
+    
+    .main-content.ir-list th,
+    .main-content.ir-list td {
+        padding: 8px 5px;
+    }
+    
+    .main-content.ir-list td:nth-child(1),
+    .main-content.ir-list th:nth-child(1) {
+        width: 15%;
+    }
+    
+    .main-content.ir-list td:nth-child(2),
+    .main-content.ir-list th:nth-child(2) {
+        width: 60%;
+    }
+    
+    .main-content.ir-list td:nth-child(3),
+    .main-content.ir-list th:nth-child(3) {
+        width: 25%;
+    }
+    
+    /* IR 상세 페이지 반응형 */
+    .main-content.ir-detail h2 {
+        font-size: 20pt;
+        line-height: 1.3;
+    }
+    
+    .notice-content {
+        font-size: 12pt;
+    }
+    
+    /* 다운로드 페이지 반응형 */
+    .main-content.download-page h2 {
+        font-size: 24pt;
+        margin-bottom: 20px;
+    }
+    
+    .announcement-box {
+        padding: 15px;
+        margin: 0 auto 20px;
+    }
+    
+    .announcement-box p {
+        font-size: 11pt;
+        line-height: 1.5;
+    }
+    
+    .video-container {
+        margin: 0 auto 20px;
+    }
+    
+    .download-section {
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+    
+    .download-section h3 {
+        font-size: 18pt;
+        margin-bottom: 10px;
+    }
+    
+    .download-section p {
+        font-size: 12pt;
+        margin-bottom: 15px;
+    }
+    
+    .download-button {
+        padding: 12px 20px !important;
+        font-size: 14pt !important;
+        display: block !important;
+        margin: 10px auto !important;
+        max-width: 250px !important;
+    }
+    
+    /* 푸터 반응형 */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    
+    .footer-logo {
+        height: 80px;
+        margin: 0 0 15px 0;
+    }
+    
+    .footer-info {
+        font-size: 10pt;
+        text-align: center;
+    }
+    
+    .footer-info p {
+        margin: 0 0 5px 0;
+    }
+}
+
+/* 태블릿 기기 */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .header {
+        padding: 15px;
+    }
+    
+    .company-logo {
+        height: 60px;
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+    
+    .nav {
+        margin-right: 30px;
+        margin-top: 20px;
+    }
+    
+    .nav a {
+        font-size: 16pt;
+        margin-left: 15px;
+    }
+    
+    .main-content {
+        padding: 30px 30px;
+    }
+    
+    .main-content.index-page p {
+        font-size: 20pt;
+    }
+    
+    .main-content.ir-list h2 {
+        font-size: 30pt;
+    }
+    
+    .main-content.download-page h2 {
+        font-size: 30pt;
+    }
+    
+    .download-section h3 {
+        font-size: 20pt;
+    }
+    
+    .footer-logo {
+        height: 100px;
+    }
+}
+
+/* 매우 작은 화면 (스마트폰) */
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 5px;
+    }
+    
+    .company-logo {
+        height: 40px;
+        margin: 5px 0;
+    }
+    
+    .nav a {
+        font-size: 12pt;
+        margin: 0 5px;
+    }
+    
+    .main-content {
+        padding: 15px 10px;
+    }
+    
+    .main-content.index-page p {
+        font-size: 16pt;
+    }
+    
+    .main-content.ir-list h2 {
+        font-size: 20pt;
+    }
+    
+    .main-content.ir-list table {
+        font-size: 10pt;
+    }
+    
+    .main-content.ir-list th,
+    .main-content.ir-list td {
+        padding: 5px 3px;
+    }
+    
+    .announcement-box {
+        padding: 10px;
+    }
+    
+    .announcement-box p {
+        font-size: 10pt;
+    }
+    
+    .download-section {
+        padding: 15px;
+    }
+    
+    .download-section h3 {
+        font-size: 16pt;
+    }
+    
+    .download-section p {
+        font-size: 11pt;
+    }
+    
+    .download-button {
+        padding: 10px 15px !important;
+        font-size: 12pt !important;
+    }
+    
+    .footer-logo {
+        height: 60px;
+    }
+    
+    .footer-info {
+        font-size: 9pt;
+    }
 } 

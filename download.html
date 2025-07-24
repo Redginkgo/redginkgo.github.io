@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RedGinkgo Games - Download</title>
 <link rel="stylesheet" href="style.css">
-<script src="main.js" defer></script>
 <link rel="icon" href="https://media.redginkgogames.com/Image/icon_32.ico">
 </head>
 <body>
@@ -37,12 +36,9 @@
 
     <div class="video-container">
         <video src="https://media.redginkgogames.com/Media/1227006_1_IMJIN_Promotional_Movie.mp4" autoplay loop moted playsinline controls></video>
-        <!-- <video src="https://media.redginkgogames.com/Media/Introduction_to_IMJIN_WAR.mp4" autoplay loop moted playsinline controls></video> -->
-        <!-- <video src="https://media.redginkgogames.com/Media/Kim_Taegons_Statement_of_Intent.mp4" autoplay loop muted playsinline controls></video> -->
     </div>
     <div class="video-container">
         <video src="https://media.redginkgogames.com/Media/Kim_Taegons_Statement_of_Intent.mp4" playsinline controls></video>
-        <!-- <video src="https://media.redginkgogames.com/Media/Introduction_to_IMJIN_WAR.mp4" autoplay loop moted playsinline controls></video> -->
     </div>
     <div class="download-content">     
         <div class="download-section">
@@ -56,6 +52,26 @@
 </div>
 
 <div id="footer-placeholder"></div>
+
+<script>
+// footer 로딩 함수
+function loadFooter() {
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(html => {
+            const footerPlaceholder = document.getElementById('footer-placeholder');
+            if (footerPlaceholder) {
+                footerPlaceholder.innerHTML = html;
+            }
+        })
+        .catch(error => {
+            console.error('Footer 로딩 실패:', error);
+        });
+}
+
+// 페이지 로드 시 footer 로드
+document.addEventListener('DOMContentLoaded', loadFooter);
+</script>
 
 </body>
 </html>

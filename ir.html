@@ -6,7 +6,6 @@
 <title>RedGinkgo Games - IR 공고</title>
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="https://media.redginkgogames.com/Image/icon_32.ico">
-<script src="main.js" defer></script>
 </head>
 <body>
 
@@ -41,6 +40,26 @@
 </div>
 
 <div id="footer-placeholder"></div>
+
+<script>
+// footer 로딩 함수
+function loadFooter() {
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(html => {
+            const footerPlaceholder = document.getElementById('footer-placeholder');
+            if (footerPlaceholder) {
+                footerPlaceholder.innerHTML = html;
+            }
+        })
+        .catch(error => {
+            console.error('Footer 로딩 실패:', error);
+        });
+}
+
+// 페이지 로드 시 footer 로드
+document.addEventListener('DOMContentLoaded', loadFooter);
+</script>
 
 </body>
 </html> 

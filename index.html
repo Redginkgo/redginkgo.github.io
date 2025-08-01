@@ -1,47 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RedGinkgo Games</title>
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="https://media.redginkgogames.com/Image/icon_32.ico">
+  <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Grayscale - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+  <title>Sticky Footer</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width:100%;
+      margin: 0;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* 전체 화면 높이 */
+      background-color: black;
+    }
+
+    .content {
+      flex: 1; /* 남은 공간을 모두 채움 */
+      background-color: #050505;
+    }
+
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .container-common {
+    max-width: 1472px;   /* 이미지와 동일하게 설정 */
+    margin: 0 auto;      /* 가운데 정렬 */
+    width: 100%;
+    box-sizing: border-box;
+}
+  </style>
+  <script>
+    function adjustMainWrapperHeight() {
+        const header = document.getElementById('top-nav');
+        const footer = document.getElementById('footer-section');
+        const mainWrapper = document.getElementById('main-section');
+
+        const headerHeight = header?.offsetHeight || 0;
+        const footerHeight = footer?.offsetHeight || 0;
+        const windowHeight = window.innerHeight;
+
+        const availableHeight = windowHeight - headerHeight - footerHeight;
+
+        mainWrapper.style.height = availableHeight + 'px';
+
+        console.log('Header Height:', headerHeight);
+        console.log('Footer Height:', footerHeight);
+        console.log('Available Height:', availableHeight);
+    }
+
+    // 최초 로딩 시 & 리사이즈 시 재계산
+    window.addEventListener('load', adjustMainWrapperHeight);
+    window.addEventListener('resize', adjustMainWrapperHeight);
+  </script>
 </head>
 <body>
-
-<div class="header">
-    <a href="index.html"><img src="./www/CI.png" alt="Company Logo" class="company-logo"></a>
-    <div class="nav">
-        <a href="index.html">HOME</a>
-        <a href="ir.html">IR</a>
+  <div class="wrapper">
+    <!-- <nav id="top-nav" class="navbar navbar-expand-lg navbar-light" id="mainNav" style="background-color: #000000; height: 0px; !important">
+            <img src="assets/img/CI.png" style="max-width:200px; padding:5px 5px 5px;">
+    </nav> -->
+    <div class="content">
+      <section id="main-section">
+            <div class="container-common" style="background-color: black; display: flex; justify-content: center; align-items: center;">
+                <img src="assets/img/main.png" style="width:100%; max-width: 1472px;">
+            </div>
+        </section>
     </div>
-</div>
+    <footer id="footer-section" class="footer small text-white-50" style="background-color: #000000;">
+        <div style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            text-align: left;            
+        ">
+            <!-- <img src="assets/img/foot_ci.png" style="width:auto; max-width: 130px;"> -->
+            <div class="container-common">
+                <p style="margin: 0;">
+                    RedGinkgo Games Co., Ltd.<br>
+                    CEO Sooyong Park<br>
+                    Address: 05719, 537, 5F, 97, Jungdae-ro, Songpa-gu, Seoul, Korea (Garak-dong)<br>
+                    Business Registration Number: 835-86-02903<br>
+                    E-mail: contact-us@redginkgogames.com
+                </p>
+            </div>
+        </div>
+        </footer>
 
-<div class="main-content index-page">
-    <p>WE ARE GAME DEVELOPMENT EXPERTS<br>FROM SOUTH KOREA.</p>
-</div>
-
-<div id="footer-placeholder"></div>
-
-<script>
-// footer 로딩 함수
-function loadFooter() {
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(html => {
-            const footerPlaceholder = document.getElementById('footer-placeholder');
-            if (footerPlaceholder) {
-                footerPlaceholder.innerHTML = html;
-            }
-        })
-        .catch(error => {
-            console.error('Footer 로딩 실패:', error);
-        });
-}
-
-// 페이지 로드 시 footer 로드
-document.addEventListener('DOMContentLoaded', loadFooter);
-</script>
-
+  </div>
 </body>
 </html>

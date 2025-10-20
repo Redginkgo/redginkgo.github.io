@@ -204,16 +204,23 @@ hr {
     margin: 15px 0;
 }
 .video-container {
+    position: relative;
     width: 100%;
     max-width: 800px;
     margin: 0 auto 40px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
 }
-.video-container video {
+.video-container video,
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
 }
 .main-content.download-page {

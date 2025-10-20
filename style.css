@@ -12,7 +12,6 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Use min-height to ensure footer stays at bottom */
 }
 .header {
     background-color: transparent;
@@ -40,7 +39,6 @@ body {
     font-size: 18pt;
 }
 .main-content {
-    flex-grow: 1;
     padding: 40px 50px; /* Add padding for consistency */
 }
 
@@ -187,7 +185,7 @@ hr {
     border-radius: 8px;
     padding: 20px;
     margin: 0 auto 40px;
-    max-width: 800px;
+    max-width: 780px;
     text-align: left;
     font-family: 'Noto Sans KR', sans-serif;
 }
@@ -206,13 +204,12 @@ hr {
 .video-container {
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 747px; /* 420px 높이에 맞는 16:9 비율의 너비 */
     margin: 0 auto 40px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
+    aspect-ratio: 16 / 9;
 }
 .video-container video,
 .video-container iframe {
@@ -233,7 +230,7 @@ hr {
     margin-bottom: 40px;
 }
 .download-content {
-    max-width: 800px;
+    max-width: 780px;
     margin: 0 auto;
 }
 .download-section {

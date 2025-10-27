@@ -31,12 +31,16 @@ window.addEventListener('DOMContentLoaded', event => {
 
     // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            rootMargin: '0px 0px -40%',
-        });
-    };
+    try {
+        if (mainNav && typeof bootstrap !== 'undefined' && bootstrap && bootstrap.ScrollSpy) {
+            new bootstrap.ScrollSpy(document.body, {
+                target: '#mainNav',
+                rootMargin: '0px 0px -40%',
+            });
+        }
+    } catch (e) {
+        // Ignore when Bootstrap is not present
+    }
 
     // Collapse responsive navbar when toggler is visible
     const navbarToggler = document.body.querySelector('.navbar-toggler');
@@ -52,3 +56,26 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+// OS Guides tabs (simple, no dependency)
+(function () {
+    var container = document.getElementById('os-guides');
+    if (!container) return;
+    var buttons = container.querySelectorAll('.tab-button');
+    var panels = container.querySelectorAll('.tab-panel');
+    buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var target = btn.getAttribute('data-tab');
+            buttons.forEach(function (b) {
+                var isActive = b === btn;
+                b.classList.toggle('active', isActive);
+                b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            });
+            panels.forEach(function (p) {
+                var isTarget = p.id === 'panel-' + target;
+                p.classList.toggle('active', isTarget);
+                if (isTarget) { p.removeAttribute('hidden'); } else { p.setAttribute('hidden', ''); }
+            });
+        });
+    });
+})();

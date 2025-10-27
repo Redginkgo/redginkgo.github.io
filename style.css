@@ -744,3 +744,16 @@ a {
         font-size: 9pt;
     }
 } 
+
+/* OS Guides (Download supporters page) */
+.os-guides { margin: 32px 0; }
+.os-guides h2 { margin-bottom: 12px; }
+.os-guides .tab-buttons { display: flex; gap: 8px; margin-bottom: 12px; justify-content: center; flex-wrap: wrap; }
+.os-guides .tab-button { padding: 8px 12px; border: 1px solid #ccc; background: #f7f7f7; cursor: pointer; border-radius: 6px; font-family: 'Noto Sans KR', sans-serif; }
+.os-guides .tab-button.active { background: #e9eefc; border-color: #b3c3ff; }
+.os-guides .tab-panels { max-width: 780px; margin: 0 auto; }
+.os-guides .tab-panel[hidden] { display: none; }
+.os-guides .ratio-16x9 { position: relative; width: 100%; padding-top: 56.25%; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+.os-guides .ratio-16x9 > iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.os-guides .video-alt-link { margin-top: 8px; text-align: right; font-family: 'Noto Sans KR', sans-serif; }
+.os-guides .notice.i18n { margin-top: 8px; font-size: 0.95em; line-height: 1.5; text-align: left; font-family: 'Noto Sans KR', sans-serif; }
